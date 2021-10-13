@@ -1,3 +1,5 @@
+// Carrossel
+
 const gap = 16;
 
 const carousel = document.getElementById("carousel"),
@@ -28,6 +30,7 @@ let width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
 
+// Alinhar main no centro
 window.addEventListener('resize', calculaMargin);
 
 function calculaMargin() {
@@ -38,6 +41,8 @@ function calculaMargin() {
 
 calculaMargin();
 
+
+// Listagem de filmes
 function listarFilme() {
   var content = document.getElementById('content');
 
@@ -47,6 +52,7 @@ function listarFilme() {
 
 }
 
+// Adicionar filme a lista do carrossel
 function adicionarItemFilme(filme) {
   var img = document.createElement('img');
 
@@ -64,6 +70,7 @@ function adicionarItemFilme(filme) {
   return img;
 }
 
+// Setar infos do filme no popup
 function setarInfos(filme) {
   var img = document.getElementById('imgFilme'),
       nome = document.getElementById('nomeFilme'),
@@ -83,6 +90,8 @@ function setarInfos(filme) {
 
 listarFilme();
 
+
+// Listagem de melhores filmes
 function listarMelhoresFilme() {
   var melhores = document.getElementById('melhores');
 
@@ -92,6 +101,7 @@ function listarMelhoresFilme() {
 
 }
 
+// Adicionar melhores filmes a lista
 function adicionarItemMelhoresFilme(filme) {
   var div = document.createElement('div');
   var img = document.createElement('img');
@@ -112,6 +122,7 @@ function adicionarItemMelhoresFilme(filme) {
   return div;
 }
 
+// Estrelinhas
 function adicionaEstrela() {
   var img = document.createElement('img');
 
